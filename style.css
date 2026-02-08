@@ -1,0 +1,186 @@
+/* RESET GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial Black', 'Arial', sans-serif;
+}
+
+body {
+    padding-top: 130px; 
+    background-color: #f4f4f4;
+}
+
+/* WHATSAPP FLOTANTE */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 5px 15px rgba(0,0,0,0.3);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.whatsapp-float:hover { transform: scale(1.1); background-color: #128C7E; }
+
+/* BARRA DE NAVEGACIÓN */
+.navbar {
+    background: #ffffff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px 0;
+    border-bottom: 6px solid #f0ad4e;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-img {
+    height: 120px; 
+    width: auto;
+}
+
+.nav-contact {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.btn-tel {
+    background: #f0ad4e;
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 900;
+    box-shadow: 0 4px 0 #c68a30;
+}
+
+/* SECCIÓN HERO */
+.hero {
+    height: 75vh;
+    background-image: url('https://lirp.cdn-website.com/4bc4e315/dms3rep/multi/opt/logistica-FAW-ligeros-640w.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.hero-content { color: #fff; max-width: 750px; }
+
+.tag {
+    background: #f0ad4e;
+    color: #000;
+    padding: 6px 15px;
+    font-weight: 900;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.hero h1 { font-size: 4.2rem; line-height: 1; margin-bottom: 20px; }
+.highlight { color: #f0ad4e; }
+.hero p { font-size: 1.4rem; margin-bottom: 30px; font-family: 'Arial', sans-serif; font-weight: normal; }
+
+.btn-whatsapp-main {
+    background: #25d366;
+    color: #fff;
+    padding: 20px 40px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.3rem;
+    border-radius: 5px;
+    display: inline-block;
+    transition: 0.3s;
+}
+.btn-whatsapp-main:hover { background: #1ea952; transform: scale(1.02); }
+
+/* SERVICIOS */
+.servicios { padding: 80px 10%; text-align: center; }
+.section-title { font-size: 2.5rem; margin-bottom: 40px; color: #333; }
+.servicios-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #fff;
+    width: 320px;
+    padding: 50px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+.card:hover { transform: translateY(-10px); }
+.card i { font-size: 3.5rem; color: #f0ad4e; margin-bottom: 20px; }
+.card h3 { margin-bottom: 15px; font-size: 1.5rem; }
+.card p { font-family: 'Arial', sans-serif; color: #666; font-weight: normal; }
+
+/* SECCIÓN FAQ (NUEVA) */
+.faq { padding: 80px 10%; background-color: #f9f9f9; text-align: center; }
+.faq-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 20px; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+.faq-card { 
+    background: #fff; 
+    padding: 30px; 
+    text-align: left; 
+    border-radius: 10px; 
+    border-left: 8px solid #f0ad4e; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+}
+.faq-card h4 { margin-bottom: 10px; color: #f0ad4e; font-size: 1.1rem; }
+.faq-card p { font-family: 'Arial', sans-serif; color: #444; line-height: 1.6; font-weight: normal; }
+
+/* FOOTER */
+footer { background: #111; color: #fff; padding: 50px; text-align: center; }
+.footer-contact a { color: #f0ad4e; text-decoration: none; font-size: 1.5rem; }
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .logo-img { height: 80px; }
+    .hero h1 { font-size: 2.5rem; }
+    .nav-link span, .tag { display: none; }
+    .card { width: 100%; }
+    .faq-grid { grid-template-columns: 1fr; }
+}
